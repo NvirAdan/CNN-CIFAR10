@@ -25,7 +25,7 @@ For that reason I choosed to do it with NumPy only and see what is the math and 
 -Training loop with batching\
 -Training checkpointing\
 -Metrics tracking (Loss and Accuracy)\
--Visualization of Metrics\
+-Visualization of Metrics
 
 ## MODEL ARCHITECTURE
 
@@ -102,7 +102,7 @@ Accuracy = 0.52
 >[!NOTE]
 >Inside the Notebook you can find more metrics and tests
 
-![Metrics per batch CIFAR10]("/assets/loss_per_batch_cnncifar10.png)
+![Metrics per batch CIFAR10]("/assets/lossperbatchcnncifar10.png)
 
 
 While not having astonishing stadistics, the model proves to improve along the way of the epochs of the training,meaning that with more time the metrics will be better, this doesn't matter to the actual purpose of the project but it's important to know that it learned in the time it has trained.
