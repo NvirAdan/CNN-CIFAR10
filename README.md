@@ -16,31 +16,31 @@ For that reason I choosed to do it with NumPy only and see what is the math and 
 
 ## FEATURES
 
--Convolutional Layers (Foward and Backward)
--Maxpooling layers (Foward and Backward)
--Fully connected layers
--Relu Activation
--Softmax and Cross entropy Loss
--Weight initialization
--Training loop with batching
--Training checkpointing
--Metrics tracking (Loss and Accuracy)
--Visualization of Metrics
+-Convolutional Layers (Foward and Backward)\
+-Maxpooling layers (Foward and Backward)\
+-Fully connected layers\
+-Relu Activation\
+-Softmax and Cross entropy Loss\
+-Weight initialization\
+-Training loop with batching\
+-Training checkpointing\
+-Metrics tracking (Loss and Accuracy)\
+-Visualization of Metrics\
 
 ## MODEL ARCHITECTURE
 
 Input (3x32x32)
 
-->Conv2D(16 Kernels of 3x3)
-->ReLU
-->Conv2D(32 Kernels)
-->ReLU
+->Conv2D(16 Kernels of 3x3)\
+->ReLU\
+->Conv2D(32 Kernels)\
+->ReLU\
 ->MaxPool
 
-->Conv2D(64 Kernels)
-->ReLU
-->Conv2D(128 Kernels)
-->ReLU
+->Conv2D(64 Kernels)\
+->ReLU\
+->Conv2D(128 Kernels)\
+->ReLU\
 ->MaxPool
 
 -> Flatten
@@ -51,10 +51,10 @@ Input (3x32x32)
 
 ## TRAINING DETAILS
 
-Dataset = CIFAR-10
-Optimizer = SGD 
-Learning rate = 0.01
-Batch_size = 64
+Dataset = CIFAR-10\
+Optimizer = SGD\
+Learning rate = 0.01\
+Batch_size = 64\
 Epochs = 5 effective epochs of the 20 initially planned
 
 The training was perfomed on CPU only reaching 5 effective epochs due to time reasons.
@@ -91,52 +91,59 @@ Some issues were before start training, for example, I forgot that the ReLU func
 
 ## RESULTS AND METRICS
 
+Loss = 1.35
+
+![Loss Visualization](/assets/lossgraph.png)
+
+Accuracy = 0.52
+
+![Accuracy Visualization](/assets/accuracygraph.png)
+
+>[!NOTE]
+>Inside the Notebook you can find more metrics and tests
+
+![Metrics per batch CIFAR10]("/assets/loss_per_batch_cnncifar10.png)
 
 
+While not having astonishing stadistics, the model proves to improve along the way of the epochs of the training,meaning that with more time the metrics will be better, this doesn't matter to the actual purpose of the project but it's important to know that it learned in the time it has trained.
+
+## VISUALIZATION
+
+Here are some results of the predictions of the test data after the training of the model
+
+![Wrong Predictions](/assets/wrongpredicts.png)
+
+![Correct Predictions](/assets/correctpredictions.png)
+
+## HOW TO RUN 
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/NvirAdan/CNN-CIFAR10
+cd CNN-CIFAR10
+
+```
+
+### 2. Create a Virtual Environment (Recommended)
+
+```bash
+python -m venv venv
+venv/Scripts/activate
+
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### 4. Run the project
+
+Open the CNN.ipynb notebook and run all the cells sequentially
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## LICENSE
+This project is released under the MIT License.
